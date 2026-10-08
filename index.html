@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Look-in Store · Mira adentro</title>
+<meta name="description" content="Playeras de streetwear en Oaxaca. Elige tu modelo y pídelo por mensaje directo en Instagram @lookinstore.oax. Entregas en Oaxaca y envíos a todo México.">
+<meta property="og:title" content="Look-in Store · Mira adentro">
+<meta property="og:description" content="Streetwear seleccionado: Hellstar y Essentials. Pedidos por DM · Envíos a todo México.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand" aria-label="Look-in Store, inicio"><img src="assets/logo-negro.png" alt="Look-in Store"></a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#productos">Productos</a><a href="#como-pedir">Cómo pedir</a><a href="#entregas">Entregas</a><a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-ink btn-sm dm" href="https://ig.me/m/lookinstore.oax" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg>Pedir por DM</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <div class="eyes" aria-hidden="true"><span class="eye"><i></i></span><span class="eye"><i></i></span></div>
+        <p class="eyebrow">Nuevo drop · Streetwear</p>
+        <h1>Mira adentro.</h1>
+        <p class="lead">Playeras Hellstar y Essentials seleccionadas pieza por pieza. Los pedidos se hacen por Instagram: elige tu modelo, mándanos DM y te la entregamos en Oaxaca o te la enviamos a todo México.</p>
+        <div class="hero-cta">
+          <a class="btn btn-paper" href="#productos">Ver catálogo</a>
+          <a class="btn btn-line" href="https://ig.me/m/lookinstore.oax" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg>Pedir por Instagram</a>
+        </div>
+        <a class="hero-ig" href="https://www.instagram.com/lookinstore.oax/" target="_blank" rel="noopener">Síguenos en <b>@lookinstore.oax</b> →</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="tile t1"><img src="img/p01.jpg" alt=""></div>
+        <div class="tile t2"><img src="img/p04.jpg" alt=""></div>
+        <div class="tile t3"><img src="img/p10.jpg" alt=""></div>
+        <div class="tile t4"><img src="img/p12.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="wrap facts">
+      <div><b>10</b><span>modelos Hellstar</span></div>
+      <div><b>3</b><span>colores Essentials</span></div>
+      <div><b>OAX</b><span>entregas en persona y envíos a todo MX</span></div>
+      <div><b>DM</b><span>pedidos por Instagram</span></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="t-cat">
+    <div class="sec-head"><p class="eyebrow">Explora</p><h2 id="t-cat">Colecciones</h2></div>
+    <div class="cats" id="cats"></div>
+  </section>
+
+  <section class="wrap sec" id="productos" aria-labelledby="t-prod">
+    <div class="sec-head row">
+      <div><p class="eyebrow">Toca una playera para ver sus detalles</p><h2 id="t-prod">Catálogo</h2></div>
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" id="q" placeholder="Busca: Hellstar, Essentials, blanca, #04…" aria-label="Buscar playera"></label>
+    </div>
+    <a class="ig-note" href="https://ig.me/m/lookinstore.oax" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg><span><b>Los pedidos se hacen por Instagram.</b> Toca «Pedir» en tu playera, pega el mensaje en nuestro chat de @lookinstore.oax y te respondemos con precio y disponibilidad.</span></a>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por colección"></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden><b>No encontramos ese modelo</b>Prueba con otro nombre o pregúntanos por DM: si no está en el catálogo, quizá lo conseguimos.</div>
+  </section>
+
+  <section class="band" id="como-pedir" aria-labelledby="t-how">
+    <div class="wrap sec">
+      <div class="sec-head"><p class="eyebrow">Así de fácil</p><h2 id="t-how">Cómo pedir</h2></div>
+      <ol class="steps">
+        <li><span>1</span><b>Elige tu modelo</b><p>Cada playera tiene su número, por ejemplo #04.</p></li>
+        <li><span>2</span><b>Toca «Pedir»</b><p>Copiamos tu mensaje y abrimos nuestro chat de Instagram. Pégalo, agrega tu talla y envíalo.</p></li>
+        <li><span>3</span><b>Te atendemos</b><p>Te compartimos precio, tallas disponibles y resolvemos tus dudas por DM.</p></li>
+        <li><span>4</span><b>Recíbela</b><p>En Oaxaca te la entregamos en un punto público. Al resto de México te la enviamos por paquetería.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="entregas" aria-labelledby="t-ent">
+    <div class="sec-head"><p class="eyebrow">Tu pedido, más cerca de ti</p><h2 id="t-ent">Entregas y pagos</h2></div>
+    <div class="zones">
+      <div class="zone"><h3>Centro<small>OAXACA</small></h3><ul><li>Zócalo</li><li>Centro histórico</li></ul></div>
+      <div class="zone"><h3>Plazas<small>OAXACA</small></h3><ul><li>Plaza Bella</li><li>Plaza Tecnomoda</li></ul></div>
+      <div class="zone"><h3>Xoxo<small>OAXACA</small></h3><ul><li>Santa Cruz Xoxocotlán</li></ul></div>
+      <div class="zone"><h3>Escuelas<small>OAXACA</small></h3><ul><li>Ciudad Universitaria</li><li>Prepas</li></ul></div>
+    </div>
+    <p class="note">El punto y la hora exactos se acuerdan por DM. Siempre en un lugar público y de día: revisas tu playera antes de pagar.</p>
+    <div class="info">
+      <div class="info-card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 16l18-8 18 8v18l-18 8-18-8z"/><path d="M6 16l18 8 18-8M24 24v18"/></svg>
+        <h3>Envíos a todo México</h3><p>Fuera de Oaxaca la enviamos por paquetería y te pasamos la guía de rastreo. Pregúntanos por DM el costo a tu ciudad.</p></div>
+      <div class="info-card"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="4"/><path d="M5 19h38M12 29h8"/></svg>
+        <h3>Formas de pago</h3><p>Efectivo al recibir (solo en Oaxaca), transferencia o depósito en OXXO. Los envíos se pagan antes de enviar.</p></div>
+      <div class="info-card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 6l-11 6 4 9 5-2v23h18V19l5 2 4-9-11-6c-1 3.5-3.6 5-7 5s-6-1.5-7-5z"/></svg>
+        <h3>Tu talla</h3><p>Essentials en CH y M. En Hellstar pregúntanos la talla y te pasamos las medidas para que elijas bien.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="preguntas" aria-labelledby="t-faq">
+    <div class="sec-head"><p class="eyebrow">Resolvemos tus dudas</p><h2 id="t-faq">Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details><summary>¿Cómo hago un pedido?</summary><p>Todos los pedidos se hacen por mensaje directo en Instagram, en <a href="https://www.instagram.com/lookinstore.oax/" target="_blank" rel="noopener">@lookinstore.oax</a>. Toca «Pedir» en la playera que te guste: copiamos un mensaje con su número (por ejemplo «Hola, me interesa la #04») y abrimos nuestro chat. Pégalo, agrega tu talla, envíalo y te atendemos.</p></details>
+      <details><summary>¿Por qué no aparecen los precios?</summary><p>Los precios y la disponibilidad de tallas cambian seguido, así que te los compartimos por DM al momento, junto con cualquier promoción vigente.</p></details>
+      <details><summary>¿Qué tallas manejan?</summary><p>Las Essentials las tenemos en <b>CH y M</b>. En las Hellstar cada modelo es distinto: escríbenos por DM con el número de la playera y te decimos qué talla hay y sus medidas.</p></details>
+      <details><summary>¿Cómo puedo pagar?</summary><p>En Oaxaca puedes pagar en efectivo al recibir tu playera, por transferencia o con depósito en OXXO. Los envíos al resto de México se pagan por transferencia u OXXO antes de enviar.</p></details>
+      <details><summary>¿Dónde entregan?</summary><p>En Oaxaca te la entregamos en persona en el centro, en plazas (Plaza Bella, Tecnomoda), en Xoxo o en escuelas como C.U. y prepas; el punto exacto lo acordamos por DM. Al resto de México la enviamos por paquetería: pregúntanos el costo y el tiempo de entrega a tu ciudad.</p></details>
+      <details><summary>¿Las playeras son originales?</summary><p>No. Nuestras playeras son <b>calidad 1:1</b>: no son productos originales de las marcas. Si tienes dudas sobre una pieza, pregúntanos y te mandamos fotos reales y medidas antes de comprar.</p></details>
+      <details><summary>¿Tienen garantía?</summary><p>Sí, 7 días por defecto de costura o de estampado. Antes de comprar te damos las medidas de la playera para que elijas bien tu talla.</p></details>
+      <details><summary>¿Puedo apartar una playera?</summary><p>Sí. Escríbenos por DM, te decimos cómo apartarla y coordinamos el envío.</p></details>
+      <details><summary>¿No encuentras lo que buscas?</summary><p>Mándanos DM con el modelo que quieres. Si no está en el catálogo, revisamos si podemos conseguirlo.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="assets/logo-blanco.png" alt="Look-in Store">
+    <p class="tag">Mira adentro</p>
+    <a class="btn btn-paper btn-sm" href="https://www.instagram.com/lookinstore.oax/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg>@lookinstore.oax</a>
+    <p class="small">Oaxaca, MX · Pedidos por Instagram · © 2026 Look-in Store</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://ig.me/m/lookinstore.oax" target="_blank" rel="noopener" aria-label="Escríbenos por Instagram">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg></a>
+
+<dialog id="modal" aria-labelledby="m-name">
+  <button class="x" id="m-close" aria-label="Cerrar">×</button>
+  <div class="m-in">
+    <div class="m-img"><img id="m-img" alt=""></div>
+    <div class="m-body">
+      <p class="eyebrow" id="m-meta"></p>
+      <h3 id="m-name"></h3>
+      <p id="m-desc" class="m-desc"></p>
+      <div class="sizes-chip" id="m-sizes" aria-label="Tallas disponibles" hidden></div>
+      <ul id="m-feats" class="feats"></ul>
+      <a class="btn btn-ink btn-block" id="m-order" href="https://ig.me/m/lookinstore.oax" target="_blank" rel="noopener"></a>
+      <p class="m-note" id="m-note"></p>
+      <button class="link" id="m-share">Copiar enlace de esta playera</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
